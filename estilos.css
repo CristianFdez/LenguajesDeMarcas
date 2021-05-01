@@ -78,6 +78,9 @@ main, header, section, aside, footer {
     border: solid 1px rgb(0, 0, 0);
 }
 
+
+
+
 /* CSS RESPONSIVO */
 @media screen and (max-width: 980px) {
     main {
