@@ -37,8 +37,8 @@
                         Este es el primer bloque del formulario destinado a Datos Personales, todos los datos son obligatorios
                     -->
                 
-                    <fieldset style="background-color: rgb(204, 217, 218);">
-                    <legend style="background-color: white;">Datos personales(*): </legend>
+                    <fieldset style="background-color: rgb(204, 217, 218); border:rgb(204, 217, 218)">
+                    <legend style="background-color: white; border: 2px solid rgb(204, 217, 218)">Datos personales(*): </legend>
                         
                         <label for="apellidos">Apellidos: </label>
                         <input id="apellidos" type="text" name="apellidos" autofocus required/>
@@ -134,8 +134,8 @@
                     </fieldset>
                     <br/>
 
-                    <fieldset style="background-color: #eeeda5;">
-                    <legend style="background-color: white;">Requisitos de acceso: </legend>
+                    <fieldset style="background-color: #eeeda5; border:#eeeda5;">
+                    <legend style="background-color: white; border: 2px solid #eeeda5">Requisitos de acceso: </legend>
 
                         <!--
                             input type="radio", Se representa como un botón de radio. 
@@ -165,88 +165,86 @@
                     </fieldset>
                     <br/>
 
-                    <fieldset style="background-color: #a5c2ee;">
-                    <legend style="background-color: white;">Documentación presentada: </legend>
-
+                    <fieldset style="background-color: #a5c2ee; border:#a5c2ee">
+                    <legend style="background-color: white;border: 2px solid #a5c3ee">Solicitud: </legend>
+                        <br/>
                         <p>El/la que suscribe desea ser admitido en este centro para cursar el ciclo formativo de grado superior:</p>
                         <label for="cicloFormativo">Ciclo formativo: </label>
                         <select name="ciclo">
                             <option value="DAM" >Desarrollo de aplicaciones multiplataforma</option>
                             <option value="DAW">Desarrollo de aplicaciones web</option>
+                        </select>
                         <br/>
 
                         <p>En caso de no ser admitido/a, solicita la admisión por orden de preferencia en los siguientes:</p>
                         <br/>
-                        <label for="opcionesCF">CICLOS FORMATIVOS: </label>
-                        <input id="CF" type="text" name="CF"/><br/>
-                        <input id="CF" type="text" name="CF"/><br/>
-                        <input id="CF" type="text" name="CF"/><br/>
-                        <!--
-                            input type="checkbox", Similar a type="radio" pero esta vez se permite seleccionar
-                            varias opciones.
-            
-                            Tambien admite el atributo "checked"
-                        -->
-                        <br/>
-                        <label for="hobbies">Hobbies: </label>
-                        <br />	
-                        <input type="checkbox" name="hobbies" value="M" checked/>Música<br />	
-                        <input type="checkbox" name="hobbies" value="L" checked/>Lectura<br />	
-                        <input type="checkbox" name="hobbies" value="D" />Deportes<br />	
-                        <input type="checkbox" name="hobbies" value="V" />Videojuegos<br />	
-                        <br/>
-                        <!--
-                            <select><option>, La etiqueta <select> representa una lista desplegable de opciones 
-                            definidas por medio de etiquetas <option>.
-                            
-                            El texto contenido en cada <option> es el valor visible para el usuario.
-                            
-                            El valor que se enviará al servidor es el que contiene el atributo value de la opción 
-                            seleccionada por el usuario (LUN, MAR, MIE, JUE o VIE).
-            
-                            Por defecto se marcará el primer "option" pero tambien podemos usar el atributo 
-                            "selected" para marcar el que nosotros queramos.
-            
-                            El comportamiento por defecto es muy parecido al del type="radio", solo se puede elegir
-                            uno. Aunque tambien es posible permitir varias opciones con el atributo "multiple"
-                            (no suele ser muy habitual)
-                        -->
-                        <label for="dia_nacimiento">Escoja el día en que nació: </label>
-                        <select name="dia_nacimiento">
-                            <option value="MON">Lunes</option>
-                            <option value="TUE">Martes</option>
-                            <option value="WED" selected>Miércoles</option>
-                            <option value="THU">Jueves</option>
-                            <option value="FRI">Viernes</option>
-                        </select>
-                        <br />
-                        <!--
-                            <textarea>, Se representa como una caja de texto multilínea. Tiene los siguientes 
-                            atributos:
-            
-                                1) rows: número de filas visibles del campo.
-            
-                                2) cols: ancho del campo.
-            
-                                3) readonly: solo lectura. (este tambien se puede encontrar en los text y en otros)
-                        -->
-                        <br/>
-                        <label for="observaciones">Observaciones: </label>
-                        <br />	
-                        <textarea rows="5" cols="80" name="observaciones"></textarea>
-                         <!--
-                            Un checkbox tambien es común para opciones simples de marcar o desmarcar
-                        -->
-                        <br/>
-                        <br/>
-                        <label for="terminos">Acepta los terminos de uso? </label>
+
+                        <table>
+                            <tr>
+                              <th>Ciclos formativos</th>
+                              <th>Centros</th>
+                              <th>Localidad</th>
+                            </tr>
+                            <tr>
+                              <td><label for="otros_ciclos"></label><input id="otros_ciclos" type="text" name="otros_ciclos" /></td>
+                              <td><label for="otros_centros"></label><input id="otros_centros" type="text" name="otros_centros" /></td>
+                              <td><label for="localidad_cf"></label><input id="localidad_cf" type="text" name="localidad_cf" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="otros_ciclos"></label><input id="otros_ciclos" type="text" name="otros_ciclos" /></td>
+                                <td><label for="otros_centros"></label><input id="otros_centros" type="text" name="otros_centros" /></td>
+                                <td><label for="localidad_cf"></label><input id="localidad_cf" type="text" name="localidad_cf" /></td>
+                              </tr>
+                        </table>
+                        
+                        <label for="horario_especial"> </label>
                         <br/>	
-                        He leido y acepto los terminos de uso <input type="checkbox" name="terminos" value="Y" />
-                        <br/>	
-                        <!--
-                            input type="submit", Se representa como un botón y cuando el usuario hace clic en él, 
-                            se realiza la petición HTTP al programa de servidor especificado en el atributo action.
-                        -->
+                        Modalidad de horario especial (marque) <input type="checkbox" name="horario_especial" value="Y" />
+                        <br/>
+                    </fieldset>
+                    <br/>
+
+                    <fieldset style="background-color: #e6918b; border:#e6918b">
+                    <legend style="background-color: white; border: 2px solid #e6918b">Documentación presentada: </legend>
+                        <br/>
+                        <label for="documentacion"></label>
+                        <input type="checkbox" name="documentacion" value="DNI" />Fotocopia DNI	
+                        <input type="checkbox" name="documentacion" value="Cert" />Certificado académico<br />	
+                        <input type="checkbox" name="documentacion" value="otros" />Otros (especifique):
+                                    <input id="otrostexto" type="text" name="otrosTexto" /><br />		
+                        <br/>
+                    </fieldset>
+                    <br/>
+
+                    <fieldset style="background-color: #e9b67d; border:#e9b67d; text-align: justify">
+                    <legend style="background-color: white; border: 2px solid #e9b67d">Comunicación: </legend>
+                        <br/>
+                        <p>De acuerdo con el artículo 42.2 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico
+                            de las Administraciones Públicas y del Procedimiento Administrativo Común, según la nueva 
+                            redacción de la Ley 4/1999, de 13 de Enero, se informa que:
+                        </p>
+                        <ul type="circle"></ul>
+                        <br/>
+                            <li style="text-indent: 20px">El plazo máximo para resolver la presente solicitud es de 3 meses desde la fecha en que
+                                haya tenido entrada en el registro del órgano competente para la tramitación, sin perjuicio
+                                de lo previsto en el artículo 42.5 de la misma ley.</li><br/>
+                            <li style="text-indent: 20px">El efecto que producirá el silencio administrativo si transcurre el plazo sin que se haya 
+                                dictado y notificado la resolución correspondiente, es desestimatorio de la solicitud.</li><br/>
+                        </ul>
+                        
+                        <p>La persona solicitante, </p>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <p>Firma </p>
+                        <br/>
+                        <label for="registro">Registro de entrada: </label>
+                        <br />	
+                        <textarea rows="5" cols="40" name="registro"></textarea>
+                        
                         <br/>	
                         <input type="submit" value="Enviar datos" />
                         <!--
