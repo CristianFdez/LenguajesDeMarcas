@@ -1,8 +1,118 @@
-#contenedor>header {
-    background-color:grey;
-    height: 100px;
-    overflow: auto;
+/* Selector comodin, se aplica a todos los elementos */
+* {
+    padding: 0px;
+    margin: 0px;
 }
-h3{
-    color:hotpink
+
+/* CSS */
+main {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+    width: 960px;
+    margin: 20px auto;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h5 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main>header {
+    height: 180px;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+nav {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+section>header {
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+section {
+    border: 1px solid rgb(0, 0, 0);
+    width: 600px;
+    float: left;
+}
+
+section article {
+    padding: 5px;
+    text-align: justify;
+}
+
+aside {
+    width: 300px;
+    float: right;
+    text-align: center;
+}
+
+footer {
+    border: 1px solid rgb(0, 0, 0);
+    clear: both;
+    text-align: center;
+}
+
+section>footer {
+    border: 1px solid rgb(0, 0, 0);
+    clear: both;
+    text-align: center;
+}
+
+header, section, aside {
+    margin-bottom: 5px;
+}
+
+main, header, section, aside, footer {
+    border: solid 1px rgb(0, 0, 0);
+}
+
+/* CSS RESPONSIVO */
+@media screen and (max-width: 980px) {
+    main {
+        width: 94%;
+    }
+    section {
+        width: 65%;
+    }
+    aside {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    section {
+        width: auto;
+        float: none;
+    }
+    aside {
+        width: auto;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        height: auto;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    aside {
+        display: none;
+    }
+    section {
+        width: 100%;
+    }
 }
