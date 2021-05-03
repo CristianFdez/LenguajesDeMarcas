@@ -6,9 +6,7 @@
 
 /* CSS */
 main {
-    border: 1px solid rgb(0, 0, 0);
-    padding: 5px;
-    width: 960px;
+    width: 1000px;
     margin: 20px auto;
 }
 
@@ -31,49 +29,55 @@ main>header {
     text-align: center;
 }
 
-.dropbtn {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
-
-.dropdown {
-    position: absolute;
+  
+li {
+    float: left;
+}
+  
+li a, .dropbtn {
     display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-
+  
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+  
+li.dropdown {
+    display: inline-block;
+  }
+  
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: lightgrey;
-    min-width: 200px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
+  
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-align: left;
 }
-
-.dropdown-content a:hover {
-    background-color: white;
-}
-
+  
+.dropdown-content a:hover {background-color: #f1f1f1;}
+  
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: grey;
-}
-
-nav {
-    margin-right: 10px;
-    margin-bottom: 10px;
 }
 
 section>header {
@@ -114,7 +118,7 @@ header, section, aside {
     margin-bottom: 5px;
 }
 
-main, header, section, aside, footer {
+header, section, aside, footer {
     border: solid 1px rgb(0, 0, 0);
 }
 
@@ -123,40 +127,75 @@ table, th, td {
 }
 
 /* CSS RESPONSIVO */
-@media screen and (max-width: 980px) {
+
+@media screen and (min-width: 1300px) {
     main {
-        width: 94%;
+        width: 70%;
     }
     section {
-        width: 65%;
+        width: 40%;
     }
     aside {
         width: 30%;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+    main {
+        width: 95%;
+    }
     section {
-        width: auto;
-        float: none;
+        width: 50%;
     }
     aside {
-        width: auto;
-        float: none;
+        width: 40%;
     }
 }
 
-@media screen and (max-width: 480px) {
-    header {
-        height: auto;
-    }
-    h1 {
-        font-size: 24px;
-    }
-    aside {
-        display: none;
+@media screen and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    main {
+        width: 95%;
     }
     section {
-        width: 100%;
+        width: 45%;
+    }
+    aside {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+    main {
+        width: 95%;
+    }
+    section {
+        width: 45%;
+    }
+    aside {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 414px) and (max-height: 736px) and (orientation: portrait) {
+    main {
+        width: 99%;
+    }
+    section {
+        width: 50%;
+    }
+    aside {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
+    main {
+        width: 99%;
+    }
+    section {
+        width: 50%;
+    }
+    aside {
+        width: 40%;
     }
 }
