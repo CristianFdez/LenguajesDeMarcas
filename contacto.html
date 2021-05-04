@@ -33,35 +33,33 @@
                     </li>
                 </ul>
 
-                <h2 style="background-color: rgb(132, 134, 134);font-family:Arial, Helvetica, sans-serif;
-                font-size: 22px; color:rgb(255, 255, 255); text-align: center; text-transform: uppercase"
-                >Hoja de inscripción en los ciclos formativos de grado superior</h2>
+                <h2 class="h2form">Hoja de inscripción en los ciclos formativos de grado superior</h2>
                 <br/>
                 
                 <form action="procesarFormulario.jsp" method="post">
                     
                 
-                    <fieldset style="background-color: rgb(204, 217, 218); border:rgb(204, 217, 218)">
-                    <legend style="background-color: white; border: 2px solid rgb(204, 217, 218)">Datos personales(*): </legend>
+                    <fieldset class="fieldset1">
+                    <legend class="legend1">Datos personales(*): </legend>
                         
-                        <label for="apellidos">Apellidos: </label>
-                        <input id="apellidos" type="text" name="apellidos" autofocus required"/>
+                        <label class="label1" for="apellidos">Apellidos: </label>
+                        <input class="input" id="apellidos" type="text" name="apellidos" autofocus required/>
                        
 
-                        <label for="nombre">Nombre: </label>
+                        <label class="label1" for="nombre">Nombre: </label>
                         <input id="nombre" type="text" name="nombre" required/>
                        
                         
                         
-                        <label for="dni">DNI: </label>
+                        <label class="label1" for="dni">DNI: </label>
                         <input id="dni" type="text" name="dni" required/>
                         <br/>
 
-                        <label for="lugarNacimiento">Nacido en: </label>
+                        <label class="label1" for="lugarNacimiento">Nacido en: </label>
                         <input id="lugarNacimiento" type="text" name="lugarNacimiento" required/>
                         
 
-                        <label for="provincia">Provincia: </label>
+                        <label class="label1" for="provincia">Provincia: </label>
                         <select name="provincia" required>
                             <option value="Alicante" selected>Alicante</option>
                             <option value="Almería">Almería</option>
@@ -81,21 +79,21 @@
                             <option value="Zaragoza">Zaragoza</option>                         
                         </select>
 
-                        <label for="fechaNac">Fecha de nacimiento (dd/mm/aaaa): </label>
+                        <label class="label1" for="fechaNac">Fecha de nacimiento (dd/mm/aaaa): </label>
                         <input id="fechaNacimiento" type="date" name="fechaNacimiento" required/>
                         <br/>
 
-                        <label for="domicilio">Domicilio (Calle/Plaza, número, piso): </label>
+                        <label class="label1" for="domicilio">Domicilio (Calle/Plaza, número, piso): </label>
                         <input id="domicilio" type="text" name="domicilio" required/>
 
-                        <label for="cp">Código postal: </label>
+                        <label class="label1" for="cp">Código postal: </label>
                         <input id="cp" type="text" name="cp" required/>
                         <br/>
 
-                        <label for="localidad">Localidad: </label>
+                        <label class="label1" for="localidad">Localidad: </label>
                         <input id="localidad" type="text" name="localidad" required/>
 
-                        <label for="provinciaDom">Provincia: </label>
+                        <label class="label1" for="provinciaDom">Provincia: </label>
                         <select name="provinciaDomicilio" required>
                             <option value="Alicante" selected>Alicante</option>
                             <option value="Almería">Almería</option>
@@ -115,33 +113,34 @@
                             <option value="Zaragoza">Zaragoza</option>                         
                         </select>
 
-                        <label for="teléfono">Teléfono: </label>
+                        <label class="label1" for="teléfono">Teléfono: </label>
                         <input id="telefono" type="tel" name="telefono" required/>
                         <br/>
                     </fieldset>
                     <br/>
 
-                    <fieldset style="background-color: #eeeda5; border:#eeeda5;">
-                    <legend style="background-color: white; border: 2px solid #eeeda5">Requisitos de acceso: </legend>
-                        <br />	
+                    <fieldset class="fieldset2">
+                    <legend class="legend2">Requisitos de acceso: </legend>
+                        <label for="acceso"></label>
                         <input type="radio" name="acceso" value="Directo" />
                             <label for="acceso_directo">Directo: </label>
                             <br />
-                                <input type="radio" name="acceso_directo" value="Logse" />Bachillerato<br />	
-                                <input type="radio" name="acceso_directo" value="Exp" />Bachillerato experimental<br />	
-                                <input type="radio" name="acceso_directo" value="COU" checked/>COU.Opcion:<br />	
-                                <input type="radio" name="acceso_directo" value="Otros" />FP2<br />	
-                                <input type="radio" name="acceso_directo" value="Otros" />Otros (especifique):
+                            <div class="indentado">
+                                <input class="input2" type="radio" name="acceso_directo" value="Logse" />Bachillerato<br />	
+                                <input class="input2" type="radio" name="acceso_directo" value="Exp" />Bachillerato experimental<br />	
+                                <input class="input2" type="radio" name="acceso_directo" value="COU"/>COU<br />	
+                                <input class="input2" type="radio" name="acceso_directo" value="Otros" />FP2<br />	
+                                <input class="input2" type="radio" name="acceso_directo" value="Otros" />Otros (especifique):
                                     <input id="otrostexto" type="text" name="otrosTexto" /><br />	
-                        <input type="radio" name="acceso" value="Prueba" />Mediante prueba<br />
+                            </div>
+                        <input class="input2" type="radio" name="acceso" value="Prueba" />Mediante prueba<br />
                     </fieldset>
                     <br/>
 
-                    <fieldset style="background-color: #a5c2ee; border:#a5c2ee">
-                    <legend style="background-color: white;border: 2px solid #a5c3ee">Solicitud: </legend>
-                        <br/>
+                    <fieldset class="fieldset3">
+                    <legend class="legend3">Solicitud: </legend>
                         <p>El/la que suscribe desea ser admitido en este centro para cursar el ciclo formativo de grado superior:</p>
-                        <label for="cicloFormativo">Ciclo formativo: </label>
+                        <label class="label1" for="cicloFormativo">Ciclo formativo: </label>
                         <select name="ciclo">
                             <option value="DAM" >Desarrollo de aplicaciones multiplataforma</option>
                             <option value="DAW">Desarrollo de aplicaciones web</option>
@@ -176,21 +175,19 @@
                     </fieldset>
                     <br/>
 
-                    <fieldset style="background-color: #e6918b; border:#e6918b">
-                    <legend style="background-color: white; border: 2px solid #e6918b">Documentación presentada: </legend>
-                        <br/>
+                    <fieldset class="fieldset4">
+                    <legend class="legend4">Documentación presentada: </legend>
                         <label for="documentacion"></label>
-                        <input type="checkbox" name="documentacion" value="DNI" />Fotocopia DNI	
-                        <input type="checkbox" name="documentacion" value="Cert" />Certificado académico<br />	
-                        <input type="checkbox" name="documentacion" value="otros" />Otros (especifique):
+                        <input class="input2" type="checkbox" name="documentacion" value="DNI" />Fotocopia DNI	
+                        <input class="input2" type="checkbox" name="documentacion" value="Cert" />Certificado académico<br />	
+                        <input class="input2" type="checkbox" name="documentacion" value="otros" />Otros (especifique):
                                     <input id="otrostexto" type="text" name="otrosTexto" /><br />		
                         <br/>
                     </fieldset>
                     <br/>
 
-                    <fieldset style="background-color: #e9b67d; border:#e9b67d; text-align: justify">
-                    <legend style="background-color: white; border: 2px solid #e9b67d">Comunicación: </legend>
-                        <br/>
+                    <fieldset class="fieldset5">
+                    <legend class="legend5">Comunicación: </legend>
                         <p>De acuerdo con el artículo 42.2 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico
                             de las Administraciones Públicas y del Procedimiento Administrativo Común, según la nueva 
                             redacción de la Ley 4/1999, de 13 de Enero, se informa que:
@@ -204,20 +201,21 @@
                                 dictado y notificado la resolución correspondiente, es desestimatorio de la solicitud.</li><br/>
                         </ul>
                         
+                        <br/>
+                        <br/>
+                        <div class="registro">
+                            <label style="float:right" for="registro">Registro de entrada: </label>
+                            <br />	
+                            <textarea rows="5" cols="40" name="registro"></textarea>
+                        </div>
+        	
                         <p>La persona solicitante, </p>
-                        <br/>
-                        <br/>
                         <br/>
                         <br/>
                         <br/>
                         <br/>
                         <p>Firma </p>
                         <br/>
-                        <label for="registro">Registro de entrada: </label>
-                        <br />	
-                        <textarea rows="5" cols="40" name="registro"></textarea>
-                        
-                        <br/>	
                         <input type="submit" value="Enviar datos" />
                         
                         <input type="reset" value="Limpiar formulario" />
